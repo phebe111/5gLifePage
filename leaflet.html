@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title></title>
+    <script src="./jquery-3.4.1.min.js"></script>
+    <script src="./font_size.js"></script>
+    <style>
+        html,body{
+            margin:0;
+            width: 100%;
+        }        
+        .wrap{
+            font-size: 0;
+            position: relative;
+        }
+        .wrap img{
+            width: 100%;
+            /* width: 10rem;
+            height: 75.8rem; */
+        }
+        .clickDiv{
+            height: .533333rem;
+            width: 2rem;
+            position: absolute;
+            bottom: 8.013333rem;
+            left: 1.293333rem;
+            border: 1px solid red; 
+        }
+        .cover{
+            width: 10rem;
+            height: 75.8rem;
+            background-color: rgba(0,0,0,0.6);
+            z-index: 22;
+            position: absolute;
+            top: 0;
+            display: none;
+            font-size: 0;
+        }
+        .cover img{
+            height: 41.346667rem;
+            width: 9.2rem;
+            margin-left: .4rem;
+            margin-top: 10.04rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <img src="./index.png">
+        <div class="clickDiv" onclick="dialog()"></div>
+        
+    </div>
+    <div class="cover" onclick="closeDialog()">
+        <img src="./dialog.png">
+    </div>
+</body>
+<script>
+    function dialog(){
+        $(".cover").show();
+    }
+    function closeDialog(){
+        $(".cover").hide();
+    }
+</script>
+</html>
